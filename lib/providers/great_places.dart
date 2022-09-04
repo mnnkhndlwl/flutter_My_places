@@ -27,7 +27,7 @@ class GreatPlaces with ChangeNotifier {
       'title': newPlace.title,
       'image': newPlace.image.path,
     });
-  }
+  } 
 
   Future<void> fetchAndSetPlaces() async {
     final dataList = await DBHelper.getData('user_places');
