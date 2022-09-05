@@ -18,7 +18,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
   final _titleController = TextEditingController();
 
   File _pickedImage;
-   PlaceLocation _pickedLocation;
+  PlaceLocation _pickedLocation;
 
   void _selectPlace(double latitude, double longitude) {
     _pickedLocation = PlaceLocation(latitude: latitude, longitude: longitude);
@@ -32,7 +32,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
     if(_titleController.text.isEmpty || _pickedImage == null) {
       return;
     }
-    Provider.of<GreatPlaces>(context,listen: false).addPlace( _titleController.text, _pickedImage);
+    Provider.of<GreatPlaces>(context,listen: false).addPlace( _titleController.text, _pickedImage,_pickedLocation);
     Navigator.of(context).pop();
   }
 
