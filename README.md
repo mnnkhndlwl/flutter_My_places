@@ -8,4 +8,6 @@
 
 # Tech stack used :-
   flutter<br/> 
-  mapbox api
+  mapbox api<br/>
+  android studio<br/>
+  sqlite
